@@ -158,3 +158,39 @@ header {
 
   transition: 0.5s;
 }
+
+.workers {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100vh;
+}
+
+.workers-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.who-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.where-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.where-sub img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.where-sub h1 {
+  font-size: 2rem;
+  padding: 0 2rem;
+  margin: auto;
+}
