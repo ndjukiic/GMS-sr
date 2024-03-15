@@ -49,6 +49,16 @@ main {
   margin: auto 0;
 }
 
+.bg-text h1 {
+  font-size: 3.5rem;
+  padding: 0 1rem;
+  color: rgb(237, 33, 58);
+}
+.bg-text h2 {
+  font-size: 2rem;
+  color: rgb(237, 33, 58);
+}
+
 .logo a {
   text-decoration: none;
   text-align: center;
@@ -74,12 +84,53 @@ header {
   margin: auto 0 auto 1.5rem;
 }
 
-.options ul {
+.sidebar {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 1rem auto;
+  padding: 0 1rem;
+
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-button {
+  display: none;
+}
+
+.options {
+  margin-right: 1.5rem;
+}
+
+.options-list {
   list-style: none;
   display: flex;
 }
 
-.options li {
+.options-list li {
   margin: auto 0.5rem;
   padding: 0.5rem 0.5rem;
   border-radius: 5px;
@@ -90,7 +141,7 @@ header {
   }
 }
 
-.options li:hover {
+.options-list li:hover {
   background: #ed213a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
@@ -134,8 +185,9 @@ header {
   display: flex;
   column-gap: 1.5rem;
   font-size: 1rem;
+  font-weight: 500;
   margin: 1.5rem auto;
-  padding: 1.5rem;
+  padding: 1rem;
   transition: 0.3s;
   border-radius: 7px;
   align-items: center;
@@ -157,6 +209,13 @@ header {
   transform: scale(1.05);
 
   transition: 0.5s;
+}
+
+#how {
+  scroll-margin-top: 4rem;
+}
+#workers {
+  scroll-margin-top: 4rem;
 }
 
 .workers {
@@ -283,4 +342,37 @@ header {
   float: left;
   width: 100%;
   height: 400px;
+}
+
+@media (max-width: 1160px) {
+  .section-50-50 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    grid-area: 1 / 1 / 2 / 2;
+    z-index: 2;
+  }
+  .bg-text {
+    backdrop-filter: blur(10px);
+  }
+  .menu-button {
+    display: block;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .sidebar {
+    width: 100%;
+  }
 }
