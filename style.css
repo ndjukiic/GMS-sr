@@ -231,9 +231,13 @@ header {
   object-fit: cover;
 }
 
+.how-text {
+  margin: auto 0;
+}
+
 .how-text ul {
   list-style: none;
-  padding: 2rem;
+  padding-right: 3rem;
 }
 
 .how-text ul li {
@@ -243,7 +247,7 @@ header {
   font-weight: 500;
   margin: 1.5rem auto;
   padding: 1rem;
-  transition: 0.3s;
+  transition: 0.5s;
   border-radius: 7px;
   align-items: center;
 }
